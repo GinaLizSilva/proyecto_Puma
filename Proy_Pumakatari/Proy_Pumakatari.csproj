@@ -41,6 +41,9 @@
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesomeIcons, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesomeIcons.1.0.3\lib\FontAwesomeIcons.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -95,8 +98,90 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\all.css" />
+    <Content Include="Content\all.min.css" />
+    <Content Include="Content\brands.css" />
+    <Content Include="Content\brands.min.css" />
+    <Content Include="Content\CSS\font-awesome.css" />
+    <Content Include="Content\CSS\font-awesome.min.css" />
+    <Content Include="Content\fontawesome.css" />
+    <Content Include="Content\fontawesome.min.css" />
+    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\regular.css" />
+    <Content Include="Content\regular.min.css" />
+    <Content Include="Content\solid.css" />
+    <Content Include="Content\solid.min.css" />
+    <Content Include="Content\svg-with-js.css" />
+    <Content Include="Content\svg-with-js.min.css" />
+    <Content Include="Content\v4-shims.css" />
+    <Content Include="Content\v4-shims.min.css" />
+    <Content Include="Scripts\fontawesome\all.js" />
+    <Content Include="Scripts\fontawesome\all.min.js" />
+    <Content Include="Scripts\fontawesome\brands.js" />
+    <Content Include="Scripts\fontawesome\brands.min.js" />
+    <Content Include="Scripts\fontawesome\conflict-detection.js" />
+    <Content Include="Scripts\fontawesome\conflict-detection.min.js" />
+    <Content Include="Scripts\fontawesome\fontawesome.js" />
+    <Content Include="Scripts\fontawesome\fontawesome.min.js" />
+    <Content Include="Scripts\fontawesome\regular.js" />
+    <Content Include="Scripts\fontawesome\regular.min.js" />
+    <Content Include="Scripts\fontawesome\solid.js" />
+    <Content Include="Scripts\fontawesome\solid.min.js" />
+    <Content Include="Scripts\fontawesome\v4-shims.js" />
+    <Content Include="Scripts\fontawesome\v4-shims.min.js" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
     <None Include="app.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="Content\Fonts\fontawesome-webfont.eot" />
+    <None Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\Fonts\fontawesome-webfont.woff" />
+    <None Include="Content\Fonts\fontawesome-webfont.woff2" />
+    <None Include="Content\Fonts\FontAwesome.otf" />
+    <None Include="Content\Less\FontAwesome\animated.less" />
+    <None Include="Content\Less\FontAwesome\bordered-pulled.less" />
+    <None Include="Content\Less\FontAwesome\core.less" />
+    <None Include="Content\Less\FontAwesome\fixed-width.less" />
+    <None Include="Content\Less\FontAwesome\font-awesome.less" />
+    <None Include="Content\Less\FontAwesome\icons.less" />
+    <None Include="Content\Less\FontAwesome\larger.less" />
+    <None Include="Content\Less\FontAwesome\list.less" />
+    <None Include="Content\Less\FontAwesome\mixins.less" />
+    <None Include="Content\Less\FontAwesome\path.less" />
+    <None Include="Content\Less\FontAwesome\rotated-flipped.less" />
+    <None Include="Content\Less\FontAwesome\stacked.less" />
+    <None Include="Content\Less\FontAwesome\variables.less" />
+    <None Include="Content\Scss\FontAwesome\font-awesome.scss" />
+    <None Include="Content\Scss\FontAwesome\_animated.scss" />
+    <None Include="Content\Scss\FontAwesome\_bordered-pulled.scss" />
+    <None Include="Content\Scss\FontAwesome\_core.scss" />
+    <None Include="Content\Scss\FontAwesome\_fixed-width.scss" />
+    <None Include="Content\Scss\FontAwesome\_icons.scss" />
+    <None Include="Content\Scss\FontAwesome\_larger.scss" />
+    <None Include="Content\Scss\FontAwesome\_list.scss" />
+    <None Include="Content\Scss\FontAwesome\_mixins.scss" />
+    <None Include="Content\Scss\FontAwesome\_path.scss" />
+    <None Include="Content\Scss\FontAwesome\_rotated-flipped.scss" />
+    <None Include="Content\Scss\FontAwesome\_stacked.scss" />
+    <None Include="Content\Scss\FontAwesome\_variables.scss" />
     <None Include="packages.config" />
+    <None Include="webfonts\fa-brands-400.eot" />
+    <None Include="webfonts\fa-brands-400.ttf" />
+    <None Include="webfonts\fa-brands-400.woff" />
+    <None Include="webfonts\fa-brands-400.woff2" />
+    <None Include="webfonts\fa-regular-400.eot" />
+    <None Include="webfonts\fa-regular-400.ttf" />
+    <None Include="webfonts\fa-regular-400.woff" />
+    <None Include="webfonts\fa-regular-400.woff2" />
+    <None Include="webfonts\fa-solid-900.eot" />
+    <None Include="webfonts\fa-solid-900.ttf" />
+    <None Include="webfonts\fa-solid-900.woff" />
+    <None Include="webfonts\fa-solid-900.woff2" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
@@ -109,6 +194,11 @@
     <EmbeddedResource Include="VenBuses.resx">
       <DependentUpon>VenBuses.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
