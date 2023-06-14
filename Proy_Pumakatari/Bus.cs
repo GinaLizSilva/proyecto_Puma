@@ -32,14 +32,8 @@ namespace Proy_Pumakatari
             Placa = p;
             Ruta = new Ruta("Quillacollo", 2.50, "Plaza Avaroa", "Obrajes", "Plaza Bolivia");
             Conductor = new Conductor("Pedro", 35, 234589, 4268, 5);
-            Asistente = new Asistente("Maria",26);
+            Asistente = new Asistente("Maria",26,1457,3);
             NroPasajero = 0;
-        }
-        public void adiAsis(Asistente x)
-        {
-            Asistente[NroAsistente] = x;
-            NroAsistente++;
-
         }
         public void adiPasajero(Pasajero x)
         {
@@ -53,11 +47,7 @@ namespace Proy_Pumakatari
             escritor.Write(Placa);
             Ruta.escritura(escritor);
             Conductor.escritura(escritor);
-            escritor.Write(NroAsistente);
-            for (int i = 0; i < NroAsistente; i++)
-            {
-                Asistente[i].escritura(escritor);         
-            }
+            Asistente.escritura(escritor);         
             escritor.Write(NroPasajero);
             for (int i = 0; i < NroPasajero; i++)
             {
@@ -70,12 +60,7 @@ namespace Proy_Pumakatari
             Placa = lector.ReadString();
             Ruta.lectura(lector);
             Conductor.lectura(lector);
-            NroAsistente = lector.ReadInt32();
-            for (int i = 0; i < NroAsistente; i++)
-            {
-                Asistente[i] = new Asistente();
-                Asistente[i].lectura(lector);
-            }
+            Asistente.lectura(lector);
             NroPasajero = lector.ReadInt32();
             for (int i = 0; i < NroPasajero; i++)
             {
@@ -85,7 +70,6 @@ namespace Proy_Pumakatari
         }
         public string Placa { get => placa; set => placa = value; }
         public int NroPasajero { get => nroPasajero; set => nroPasajero = value; }
-        public int NroAsistente { get => nroAsistente; set => nroAsistente = value; }
         public Fecha Fecha { get => fecha; set => fecha = value; }
         public Ruta Ruta { get => ruta; set => ruta = value; }
         public Conductor Conductor { get => conductor; set => conductor = value; }
