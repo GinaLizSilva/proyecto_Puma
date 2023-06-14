@@ -34,7 +34,7 @@ namespace Proy_Pumakatari
 		{
 			VenBuses Buses = new VenBuses();
             Buses.Show();
-            //rogram.
+            
         } 
 	}
 }

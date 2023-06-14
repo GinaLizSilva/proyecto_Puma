@@ -38,8 +38,14 @@ namespace Proy_Pumakatari
                 fila[3] = c.Bus[i].Asistente.Nombre;
                 fila[4] = c.Bus[i].NroPasajero.ToString();
 
-                //dataGridViewEmpleados.Rows.Add(fila);
+                dataGridViewBuses.Rows.Add(fila);
             }
+        }
+
+        private void ButtonAgregarBus_Click(object sender, EventArgs e)
+        {
+            RegistrarBus RegBus = new RegistrarBus();
+            RegBus.Show();
         }
     }
 }

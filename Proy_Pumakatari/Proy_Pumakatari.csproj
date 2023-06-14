@@ -89,6 +89,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RegistrarBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarBus.Designer.cs">
+      <DependentUpon>RegistrarBus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ruta.cs" />
     <Compile Include="VenBuses.cs">
       <SubType>Form</SubType>
@@ -190,6 +196,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarBus.resx">
+      <DependentUpon>RegistrarBus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VenBuses.resx">
       <DependentUpon>VenBuses.cs</DependentUpon>
