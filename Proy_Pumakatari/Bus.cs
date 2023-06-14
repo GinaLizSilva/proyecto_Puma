@@ -13,8 +13,8 @@ namespace Proy_Pumakatari
         private string placa;
         private Ruta ruta;
         private Conductor conductor;
-        private int nroPasajero, nroAsistente;
-        private Asistente[] asistente = new Asistente[2];
+        private Asistente asistente;
+        private int nroPasajero;
         private Pasajero[] pasajero = new Pasajero[60];
 
         public Bus()
@@ -23,7 +23,7 @@ namespace Proy_Pumakatari
             Placa = "HJU-568";
             Ruta = new Ruta();
             Conductor = new Conductor();
-            NroAsistente = 0;
+            Asistente = new Asistente();
             NroPasajero = 0;
         }
         public Bus(string p)
@@ -32,7 +32,7 @@ namespace Proy_Pumakatari
             Placa = p;
             Ruta = new Ruta("Quillacollo", 2.50, "Plaza Avaroa", "Obrajes", "Plaza Bolivia");
             Conductor = new Conductor("Pedro", 35, 234589, 4268, 5);
-            NroAsistente = 0;
+            Asistente = new Asistente("Maria",26);
             NroPasajero = 0;
         }
         public void adiAsis(Asistente x)
@@ -47,40 +47,40 @@ namespace Proy_Pumakatari
             NroPasajero++;
 
         }
-        public void escrituraBus(BinaryWriter escritor)
+        public void escritura(BinaryWriter escritor)
         {
-            Fecha.escrituraFecha(escritor);
+            Fecha.escritura(escritor);
             escritor.Write(Placa);
-            Ruta.escrituraRuta(escritor);
-            Conductor.escrituraConductor(escritor);
+            Ruta.escritura(escritor);
+            Conductor.escritura(escritor);
             escritor.Write(NroAsistente);
             for (int i = 0; i < NroAsistente; i++)
             {
-                Asistente[i].escrituraAsistente(escritor);         
+                Asistente[i].escritura(escritor);         
             }
             escritor.Write(NroPasajero);
             for (int i = 0; i < NroPasajero; i++)
             {
-                Pasajero[i].escrituraPasajero(escritor);
+                Pasajero[i].escritura(escritor);
             }
         }
-        public void lecturaBus(BinaryReader lector)
+        public void lectura(BinaryReader lector)
         {
-            Fecha.lecturaFecha(lector);
+            Fecha.lectura(lector);
             Placa = lector.ReadString();
-            Ruta.lecturaRuta(lector);
-            Conductor.lecturaConductor(lector);
+            Ruta.lectura(lector);
+            Conductor.lectura(lector);
             NroAsistente = lector.ReadInt32();
             for (int i = 0; i < NroAsistente; i++)
             {
                 Asistente[i] = new Asistente();
-                Asistente[i].lecturaAsistente(lector);
+                Asistente[i].lectura(lector);
             }
             NroPasajero = lector.ReadInt32();
             for (int i = 0; i < NroPasajero; i++)
             {
                 Pasajero[i] = new Pasajero();
-                Pasajero[i].lecturaPasajero(lector);
+                Pasajero[i].lectura(lector);
             }
         }
         public string Placa { get => placa; set => placa = value; }
@@ -89,7 +89,7 @@ namespace Proy_Pumakatari
         public Fecha Fecha { get => fecha; set => fecha = value; }
         public Ruta Ruta { get => ruta; set => ruta = value; }
         public Conductor Conductor { get => conductor; set => conductor = value; }
-        public Asistente[] Asistente { get => asistente; set => asistente = value; }
         public Pasajero[] Pasajero { get => pasajero; set => pasajero = value; }
+        public Asistente Asistente { get => asistente; set => asistente = value; }
     }
 }

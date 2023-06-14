@@ -10,9 +10,9 @@ namespace Proy_Pumakatari
 {
     public class Persona
     {
-        private string nombre;
-        private int ci;
-        private int edad;
+        protected string nombre;
+        protected int ci;
+        protected int edad;
         public Persona()
         {
             Nombre = "Leo";
@@ -25,20 +25,20 @@ namespace Proy_Pumakatari
             Edad = e;
             Ci = c;
         }
-        public void escrituraPersona(BinaryWriter escritor)
+        public void escritura(BinaryWriter escritor)
         {
             escritor.Write(Nombre);
             escritor.Write(Edad);
             escritor.Write(Ci);
         }
-        public void lecturaPersona(BinaryReader lector)
+        public void lectura(BinaryReader lector)
         {
             Nombre = lector.ReadString();
             Edad = lector.ReadInt16();
             Ci = lector.ReadInt32();
         }
-        protected string Nombre { get => nombre; set => nombre = value; }
-        protected int Edad { get => edad; set => edad = value; }
-        protected int Ci { get => ci; set => ci = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public int Edad { get => edad; set => edad = value; }
+        public int Ci { get => ci; set => ci = value; }
     }
 }

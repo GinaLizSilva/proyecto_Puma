@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Proy_Pumakatari
 {
-    public class Conductor:Persona
+    public class Conductor : Persona
     {
         private int aniosExp, licencia;
+
         public Conductor() : base()
         {
             AniosExp = 2;
@@ -20,15 +21,15 @@ namespace Proy_Pumakatari
             AniosExp = aE;
             Licencia = l;
         }
-        public void escrituraConductor(BinaryWriter escritor)
+        public void escritura(BinaryWriter escritor)
         {
-            base.escrituraPersona(escritor);
+            base.escritura(escritor);
             escritor.Write(AniosExp);
             escritor.Write(Licencia);
         }
-        public void lecturaConductor(BinaryReader lector)
+        public void lectura(BinaryReader lector)
         {
-            base.lecturaPersona(lector);
+            base.lectura(lector);
             AniosExp = lector.ReadInt32();
             Licencia = lector.ReadInt32();
         }

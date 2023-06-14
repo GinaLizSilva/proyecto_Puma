@@ -33,7 +33,7 @@ namespace Proy_Pumakatari
             {
                 while (true)
                 {
-                    b.lecturaBus(lector);
+                    b.lectura(lector);
                     consola += ToString();
                 }
             }
@@ -52,7 +52,7 @@ namespace Proy_Pumakatari
 
             try
             {
-                b.escrituraBus(escritor);
+                b.escritura(escritor);
             }
             catch (Exception) { }
             finally
@@ -68,7 +68,7 @@ namespace Proy_Pumakatari
             Central c = new Central();
             try
             {
-                c.lecturaBus(lector);
+                c.lectura(lector);
             }
             catch (Exception) { }
             finally

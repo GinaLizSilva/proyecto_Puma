@@ -23,13 +23,13 @@ namespace Proy_Pumakatari
             Mes = m;
             Anio = a;
         }
-        public void escrituraFecha(BinaryWriter escritor)
+        public void escritura(BinaryWriter escritor)
         {
             escritor.Write(Dia);
             escritor.Write(Mes);
             escritor.Write(Anio);
         }
-        public void lecturaFecha(BinaryReader lector)
+        public void lectura(BinaryReader lector)
         {
             Dia = lector.ReadInt16();
             Mes = lector.ReadString();

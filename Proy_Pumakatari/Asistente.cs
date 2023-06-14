@@ -19,14 +19,14 @@ namespace Proy_Pumakatari
         {
             AniosdeExp = aE;
         }
-        public void escrituraAsistente(BinaryWriter escritor)
+        public void escritura(BinaryWriter escritor)
         {
-            base.escrituraPersona(escritor);
+            base.escritura(escritor);
             escritor.Write(AniosdeExp);
         }
-        public void lecturaAsistente(BinaryReader lector)
+        public void lectura(BinaryReader lector)
         {
-            base.lecturaPersona(lector);
+            base.lectura(lector);
             AniosdeExp = lector.ReadInt16();
         }
         public int AniosdeExp { get => aniosdeExp; set => aniosdeExp = value; }

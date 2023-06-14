@@ -18,11 +18,11 @@ namespace Proy_Pumakatari
         {
             Ubicacion = u;
         }
-        public void escrituraParada(BinaryWriter escritor)
+        public void escritura(BinaryWriter escritor)
         {
             escritor.Write(Ubicacion);
         }
-        public void lecturaParada(BinaryReader lector)
+        public void lectura(BinaryReader lector)
         {
             Ubicacion = lector.ReadString();
         }

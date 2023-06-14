@@ -39,7 +39,7 @@ namespace Proy_Pumakatari
             Final = f;
            
         }
-        public void escrituraRuta(BinaryWriter escritor)
+        public void escritura(BinaryWriter escritor)
         {
             escritor.Write(Nombre);
             escritor.Write(Pasaje);
@@ -47,11 +47,11 @@ namespace Proy_Pumakatari
             escritor.Write(NroPar);
             for (int i = 0; i < NroPar; i++)
             {
-                parada[i].escrituraParada(escritor);
+                parada[i].escritura(escritor);
             }
             escritor.Write(Final);
         }
-        public void lecturaRuta(BinaryReader lector)
+        public void lectura(BinaryReader lector)
         {
             Nombre = lector.ReadString();
             Pasaje = lector.ReadDouble();
@@ -60,7 +60,7 @@ namespace Proy_Pumakatari
             for (int i = 0; i < NroPar; i++)
             {
                 parada[i] = new Parada();
-                parada[i].lecturaParada(lector);
+                parada[i].lectura(lector);
             }
             Final = lector.ReadString();
         }

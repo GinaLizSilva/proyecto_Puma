@@ -18,14 +18,14 @@ namespace Proy_Pumakatari
         {
             Discapacidad = d;
         }
-        public void escrituraPasajero(BinaryWriter escritor)
+        public void escritura(BinaryWriter escritor)
         {
-            base.escrituraPersona(escritor);
+            base.escritura(escritor);
             escritor.Write(Discapacidad);
         }
-        public void lecturaPasajero(BinaryReader lector)
+        public void lectura(BinaryReader lector)
         {
-            base.lecturaPersona(lector);
+            base.lectura(lector);
             Discapacidad = lector.ReadString();
         }
         public string Discapacidad { get => discapacidad; set => discapacidad = value; }

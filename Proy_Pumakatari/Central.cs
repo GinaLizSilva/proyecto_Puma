@@ -10,7 +10,7 @@ namespace Proy_Pumakatari
     public class Central
     {
         private int nroBuses;
-        private Bus[] Bus= new Bus[20];
+        private Bus[] bus= new Bus[20];
 
         public Central()
         {
@@ -21,30 +21,26 @@ namespace Proy_Pumakatari
             Bus[NroBuses] = x;
             NroBuses++;
         }
-        public void escrituraCentral(BinaryWriter escritor)
+        public void escritura(BinaryWriter escritor)
         {
             escritor.Write(NroBuses);
             for (int i = 0; i < NroBuses; i++)
             {
-                Bus[i].escrituraBus(escritor);
+                Bus[i].escritura(escritor);
             }
         }
-        public void lecturaBus(BinaryReader lector)
+        public void lectura(BinaryReader lector)
         {
             NroBuses=lector.ReadInt32();
             for (int i = 0; i < NroBuses; i++)
             {
                 Bus[i]=new Bus();
-                Bus[i].lecturaBus(lector);
+                Bus[i].lectura(lector);
             }
 
         }
         public int NroBuses { get => nroBuses; set => nroBuses = value; }
-        public Bus[] Bus
-        {
-            get { return Bus; }
-            set { Bus = value; }
-        }
-       // public Bus[] Bus { get => bus; set => bus = value; }
+        
+        public Bus[] Bus { get => bus; set => bus = value; }
     }
 }
