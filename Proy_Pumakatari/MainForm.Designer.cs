@@ -43,18 +43,18 @@ namespace Proy_Pumakatari
             this.label2 = new System.Windows.Forms.Label();
             this.ButtonRuta = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.ButtonFecha = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -89,7 +89,7 @@ namespace Proy_Pumakatari
             this.ButtonRuta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonRuta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonRuta.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ButtonRuta.IconChar = FontAwesome.Sharp.IconChar.Route;
+            this.ButtonRuta.IconChar = FontAwesome.Sharp.IconChar.Bus;
             this.ButtonRuta.IconColor = System.Drawing.Color.White;
             this.ButtonRuta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ButtonRuta.IconSize = 42;
@@ -118,6 +118,44 @@ namespace Proy_Pumakatari
             this.panel1.Size = new System.Drawing.Size(261, 461);
             this.panel1.TabIndex = 5;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.iconButton1);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 169);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(261, 66);
+            this.panel7.TabIndex = 5;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(19)))), ((int)(((byte)(87)))));
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Paste;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 42;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(189, 66);
+            this.iconButton1.TabIndex = 4;
+            this.iconButton1.Text = "REPORTES";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 159);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(261, 10);
+            this.panel6.TabIndex = 4;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.ButtonFecha);
@@ -135,7 +173,7 @@ namespace Proy_Pumakatari
             this.ButtonFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFecha.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonFecha.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ButtonFecha.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
+            this.ButtonFecha.IconChar = FontAwesome.Sharp.IconChar.Route;
             this.ButtonFecha.IconColor = System.Drawing.Color.White;
             this.ButtonFecha.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ButtonFecha.IconSize = 42;
@@ -173,44 +211,6 @@ namespace Proy_Pumakatari
             this.panel2.Size = new System.Drawing.Size(261, 17);
             this.panel2.TabIndex = 0;
             // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 159);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(261, 10);
-            this.panel6.TabIndex = 4;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.iconButton1);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 169);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(261, 66);
-            this.panel7.TabIndex = 5;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(19)))), ((int)(((byte)(87)))));
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Route;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 42;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(189, 66);
-            this.iconButton1.TabIndex = 4;
-            this.iconButton1.Text = "REPORTES";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -228,9 +228,9 @@ namespace Proy_Pumakatari
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EL PUMAKATARI DE LA PAZ";
             this.panel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}

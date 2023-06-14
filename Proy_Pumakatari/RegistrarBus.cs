@@ -23,6 +23,11 @@ namespace Proy_Pumakatari
             arch = c;
         }
 
+        private void ButtonConductor_Click(object sender, EventArgs e)
+        {
+            RegistrarConductor RegCond = new RegistrarConductor();
+            RegCond.Show();
+        }
     }
 
 }
